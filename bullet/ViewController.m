@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "SYLBulletView.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    SYLBulletView *bulletView = [[SYLBulletView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:bulletView];
+    NSLog(@"123");
+    
+//    UILabel *label = [UILabel new];
+//    label.attributedText = [[NSAttributedString alloc]initWithString:@"123😁2323" attributes:nil];
+//    label.frame = CGRectMake(0, 50, 100, 20);
+//    [label sizeToFit];
+//    label.backgroundColor = [UIColor blueColor];
+//    [self.view addSubview:label];
+//    NSLog(@"--->%f",label.frame.size.width);
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -13,6 +13,10 @@
 		B83F32841D7FC42D00BF26BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83F32821D7FC42D00BF26BD /* Main.storyboard */; };
 		B83F32861D7FC42D00BF26BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B83F32851D7FC42D00BF26BD /* Assets.xcassets */; };
 		B83F32891D7FC42D00BF26BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83F32871D7FC42D00BF26BD /* LaunchScreen.storyboard */; };
+		B83F32921D7FC45400BF26BD /* SYLBulletView.m in Sources */ = {isa = PBXBuildFile; fileRef = B83F32911D7FC45400BF26BD /* SYLBulletView.m */; };
+		B83F32951D7FC49A00BF26BD /* SYLBullet.m in Sources */ = {isa = PBXBuildFile; fileRef = B83F32941D7FC49A00BF26BD /* SYLBullet.m */; };
+		B83F329B1D7FC5FC00BF26BD /* SYLBulletDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B83F329A1D7FC5FC00BF26BD /* SYLBulletDispatcher.m */; };
+		B83F329E1D7FEF5E00BF26BD /* SYLBulletTrajectory.m in Sources */ = {isa = PBXBuildFile; fileRef = B83F329D1D7FEF5E00BF26BD /* SYLBulletTrajectory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		B83F32851D7FC42D00BF26BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B83F32881D7FC42D00BF26BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B83F328A1D7FC42D00BF26BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B83F32901D7FC45400BF26BD /* SYLBulletView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLBulletView.h; sourceTree = "<group>"; };
+		B83F32911D7FC45400BF26BD /* SYLBulletView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLBulletView.m; sourceTree = "<group>"; };
+		B83F32931D7FC49A00BF26BD /* SYLBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLBullet.h; sourceTree = "<group>"; };
+		B83F32941D7FC49A00BF26BD /* SYLBullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLBullet.m; sourceTree = "<group>"; };
+		B83F32991D7FC5FC00BF26BD /* SYLBulletDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLBulletDispatcher.h; sourceTree = "<group>"; };
+		B83F329A1D7FC5FC00BF26BD /* SYLBulletDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLBulletDispatcher.m; sourceTree = "<group>"; };
+		B83F329C1D7FEF5E00BF26BD /* SYLBulletTrajectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLBulletTrajectory.h; sourceTree = "<group>"; };
+		B83F329D1D7FEF5E00BF26BD /* SYLBulletTrajectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYLBulletTrajectory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,14 @@
 				B83F327D1D7FC42D00BF26BD /* AppDelegate.m */,
 				B83F327F1D7FC42D00BF26BD /* ViewController.h */,
 				B83F32801D7FC42D00BF26BD /* ViewController.m */,
+				B83F32901D7FC45400BF26BD /* SYLBulletView.h */,
+				B83F32911D7FC45400BF26BD /* SYLBulletView.m */,
+				B83F32931D7FC49A00BF26BD /* SYLBullet.h */,
+				B83F32941D7FC49A00BF26BD /* SYLBullet.m */,
+				B83F329C1D7FEF5E00BF26BD /* SYLBulletTrajectory.h */,
+				B83F329D1D7FEF5E00BF26BD /* SYLBulletTrajectory.m */,
+				B83F32991D7FC5FC00BF26BD /* SYLBulletDispatcher.h */,
+				B83F329A1D7FC5FC00BF26BD /* SYLBulletDispatcher.m */,
 				B83F32821D7FC42D00BF26BD /* Main.storyboard */,
 				B83F32851D7FC42D00BF26BD /* Assets.xcassets */,
 				B83F32871D7FC42D00BF26BD /* LaunchScreen.storyboard */,
@@ -110,6 +130,7 @@
 				TargetAttributes = {
 					B83F32751D7FC42D00BF26BD = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = H9EMJ6BDSU;
 					};
 				};
 			};
@@ -150,8 +171,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B83F32811D7FC42D00BF26BD /* ViewController.m in Sources */,
+				B83F32951D7FC49A00BF26BD /* SYLBullet.m in Sources */,
+				B83F329B1D7FC5FC00BF26BD /* SYLBulletDispatcher.m in Sources */,
+				B83F32921D7FC45400BF26BD /* SYLBulletView.m in Sources */,
 				B83F327E1D7FC42D00BF26BD /* AppDelegate.m in Sources */,
 				B83F327B1D7FC42D00BF26BD /* main.m in Sources */,
+				B83F329E1D7FEF5E00BF26BD /* SYLBulletTrajectory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,10 +290,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = bullet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Youku.bullet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youku.liveshow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -276,10 +304,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = bullet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Youku.bullet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youku.liveshow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
