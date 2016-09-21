@@ -25,13 +25,10 @@ IOS快速弹幕开发一点通
 4 调度类:生成弹道,并且在弹幕来时将弹幕有序地放入弹道.
 
 使用:
-引入SYLBulletView.h
-初始化
-
-SYLBulletView*bulletView = [[SYLBulletView alloc]initWithFrame:self.view.bounds];
-
-[self.viewaddSubview:bulletView];
-
-使用此方法放入弹幕数据即可
-
-- (void)receiveBullet:(NSAttributedString*)string andWithPositon:(BulletPosition)position 
+引入  
+ SYLBulletView.h
+ 初始化
+ SYLBulletView*bulletView = [[SYLBulletView alloc]initWithFrame:self.view.bounds];
+ [self.viewaddSubview:bulletView];
+ 使用此方法放入弹幕数据即可
+ - (void)receiveBullet:(NSAttributedString*)string andWithPositon:(BulletPosition)position 
