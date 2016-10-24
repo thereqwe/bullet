@@ -29,6 +29,7 @@
 //    [self.view addSubview:label];
 //    NSLog(@"--->%f",label.frame.size.width);
     
+    [UIControl new];
     
 }
 

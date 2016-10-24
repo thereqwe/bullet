@@ -38,9 +38,7 @@ static id __singleton__ = nil;
     self = [super init];
     if (self) {
         _isRunning = YES;
-        [self scanBulletPool];
-        scanBulletTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(scanBulletPool) userInfo:nil repeats:YES];
-        [[NSRunLoop currentRunLoop] addTimer:scanBulletTimer forMode:NSRunLoopCommonModes];
+        [self start];
     }
     return self;
 }
@@ -58,7 +56,6 @@ static id __singleton__ = nil;
     }
     [_bulletPoolArray addObject:bullet];
 }
-
 
 //扫描弹幕池并发射由nstimer重复执行
 - (void)scanBulletPool{
@@ -150,5 +147,15 @@ static id __singleton__ = nil;
     }
 }
 
+- (void)stop {
+    if(scanBulletTimer!=nil){
+        [scanBulletTimer invalidate];
+        scanBulletTimer = nil;
+    }
+}
 
+- (void)start {
+    scanBulletTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(scanBulletPool) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:scanBulletTimer forMode:NSRunLoopCommonModes];
+}
 @end
