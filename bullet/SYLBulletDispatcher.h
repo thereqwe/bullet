@@ -15,4 +15,6 @@
 + (instancetype)sharedInstance;
 - (void)setBulletView:(SYLBulletView *)bulletView;
 - (void)addBullet:(SYLBullet*)bullet;
+- (void)start;
+- (void)stop;
 @end
